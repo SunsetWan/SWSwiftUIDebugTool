@@ -8,8 +8,7 @@
 import SwiftUI
 import Foundation
 
-@available(iOS 14, macOS 10.15, *)
-extension View {
+public extension View {
     /// Print method
     public func swPrint(_ value: Any) -> Self {
         swDebugAction {
@@ -26,7 +25,7 @@ extension View {
     }
 
     // View modifiers
-    private func debugModifier<T: View>(_ modifier: (Self) -> T) -> some View {
+    public func debugModifier<T: View>(_ modifier: (Self) -> T) -> some View {
         #if DEBUG
         return modifier(self)
         #else
