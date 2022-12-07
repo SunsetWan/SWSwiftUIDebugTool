@@ -5,9 +5,8 @@
 //  Created by Sunset Wan on 5/12/2022.
 //
 
+#if canImport(SwiftUI)
 import SwiftUI
-import Foundation
-
 extension View {
     /// Print method
     public func swPrint(_ value: Any) -> Self {
@@ -51,4 +50,5 @@ extension View {
         }
     }
 }
+#endif
 
